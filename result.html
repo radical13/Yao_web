@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Result</title>
+    <meta name="description" content="Flat UI Kit Free is a Twitter Bootstrap Framework design and Theme, this responsive framework includes a PSD and HTML version."/>
+
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="dist/css/flat-ui.css" rel="stylesheet">
+    <link href="docs/assets/css/demo.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="dist/js/vendor/html5shiv.js"></script>
+    <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <div class="demo-headline" style="padding-bottom: 0px">
+        <h1 class="demo-logo">
+            <div class="logo"></div>
+            姚氏百万富翁
+            <small><br>We will tell you who is the richer man secretively</small>
+        </h1>
+    </div> <!-- /demo-headline -->
+    <div class="demo-headline" style="padding-top: 30px;padding-bottom: 10px">
+        <h3><span id="richer" style="color: #1ABC9C;font-size: 72px">ALICE</span>&nbsp&nbsp&nbsp&nbspis richer</h3>
+    </div>
+    <hr>
+    <div class="demo-headline">
+        <div class="demo-headline" style="padding-top: 20px">
+            <div style="display: inline-block;width: 400px;">
+                <select class="form-control select select-primary" data-toggle="select">
+                    <option value="0">只查看自己的</option>
+                    <option value="1">只查看对方的</option>
+                    <option value="2">查看双方的</option>
+                </select>
+        </div>
+            <label style="font-size: 18px">显示内容&nbsp&nbsp&nbsp</label>
+            <select data-toggle="select" multiple class="form-control multiselect multiselect-inverse mrs mbm">
+                <option value="0" selected>财富值</option>
+                <option value="1">密钥</option>
+                <option value="2" selected>随机数</option>
+            </select>
+
+
+        <br><br>
+            <pre class="prettyprint" style="height: 400px;font-size: 24px">
+
+
+            </pre>
+        <div><a href="http://118.89.178.152/yao/step3.html"> <button id="last_step" class="btn btn-hg btn-danger">
+            上一步
+        </button></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button id="next_step" class="btn btn-hg btn-primary" onclick="check_num()">
+            完成
+        </button></div>
+    </div>
+</div>
+<script src="dist/js/vendor/jquery.min.js"></script>
+<script src="dist/js/vendor/video.js"></script>
+<script src="dist/js/flat-ui.min.js"></script>
+<script src="docs/assets/js/application.js"></script>
+
+<script>
+    videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
+</script>
+</body>
+</html>

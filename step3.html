@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Step3</title>
+    <meta name="description" content="Flat UI Kit Free is a Twitter Bootstrap Framework design and Theme, this responsive framework includes a PSD and HTML version."/>
+
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="dist/css/flat-ui.css" rel="stylesheet">
+    <link href="docs/assets/css/demo.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="dist/js/vendor/html5shiv.js"></script>
+    <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <div class="demo-headline" style="padding-bottom: 0px">
+        <h1 class="demo-logo">
+            <div class="logo"></div>
+            姚氏百万富翁
+            <small><br>We will tell you who is the richer man secretively</small>
+        </h1>
+    </div> <!-- /demo-headline -->
+    <div class="demo-headline" style="padding-top: 30px;padding-bottom: 10px">
+        <h3>Step3:请输入一个大素数并选择比较协议</h3>
+    </div>
+    <hr>
+    <div class="demo-headline">
+        <script type="text/javascript">
+            function init_state() {
+                document.getElementById('prime_num').innerHTML=" ";
+            }
+            function isPrime(number) {
+                if (number < 2) {
+                    return false;
+                } else {
+                    for (var j = 2; j <= Math.sqrt(number); j++) {
+                        if (number % j == 0) {
+                            return false;
+                        }
+                    }
+                }
+            }
+            function isbig(number){
+                if(number <= 99)
+                    return false;
+                else
+                    return true;
+            }
+            function check_num() {
+                number=document.getElementById('prime_num').value;
+                if(number == "Big prime")
+                {
+                    document.getElementById('state').innerHTML="输入值不能为空";
+                    return;
+                }
+
+                if (isPrime(number) == false)
+                {
+                    document.getElementById('state').innerHTML="请输入一个素数";
+                    return;
+                }
+                else if(isbig(number) == false)
+                {
+                    document.getElementById('state').innerHTML="您输入的素数不够大";
+                    return;
+                }
+                else
+                    document.getElementById('state').innerHTML="计算中";
+            }
+
+        </script>
+        <div class="demo-headline" style="padding-top: 0px;padding-bottom: 10px">
+            <div style="display: inline-block;width: 200px;">
+                <h3 style="font-size: 18px">大素数</h3><input type="text" oninput="init_state()" placeholder="Big prime" class="form-control" id="prime_num"/></div>
+            <h3 style="font-size: 18px">比较协议</h3>
+            <select class="form-control select select-primary" data-toggle="select">
+                <option value="0">姚氏1982年初始协议</option>
+                <option value="1">**协议</option>
+                <option value="2">**协议</option>
+            </select>
+        </div>
+        <label id="state" style="color:#ff4d3b;font-weight:500 ">&nbsp;</label>
+
+        <br><br>
+        <div><a href="http://118.89.178.152/yao/step2.html"><button id="last_step" class="btn btn-hg btn-danger">
+            上一步
+        </button></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button id="next_step" class="btn btn-hg btn-primary" onclick="check_num()">
+            下一步
+        </button></div>
+    </div>
+</div>
+<script src="dist/js/vendor/jquery.min.js"></script>
+<script src="dist/js/vendor/video.js"></script>
+<script src="dist/js/flat-ui.min.js"></script>
+<script src="docs/assets/js/application.js"></script>
+
+<script>
+    videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
+</script>
+</body>
+</html>
